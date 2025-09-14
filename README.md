@@ -1,10 +1,16 @@
-Disaster Risk Prediction using World Risk Index Data
-This project aims to predict the World Risk Index (WRI) for different regions using machine learning. The model is built and evaluated based on various factors contributing to disaster risk, such as exposure, vulnerability, susceptibility, and coping capacities.
+🌍 Disaster Risk Prediction using World Risk Index Data
 
-Dataset
-The model is trained on the World_risk_index__cleaned_data.csv dataset. This dataset contains the World Risk Index and its component indicators for various regions over several years.
+This project leverages machine learning to predict the World Risk Index (WRI) for different regions across the globe. The World Risk Index is a crucial measure that reflects a region’s disaster risk, determined by its exposure, vulnerability, susceptibility, and coping capacities.
 
-Features:
+By analyzing these factors, this project aims to provide valuable insights into disaster preparedness and risk reduction.
+
+📊 Dataset
+
+File: World_risk_index__cleaned_data.csv
+
+Description: Contains World Risk Index values and its contributing indicators for various regions over multiple years.
+
+Features
 
 Region
 
@@ -14,81 +20,121 @@ Vulnerability
 
 Susceptibility
 
-Lack of Coping Capabilities
+Lack of Coping Capacities
 
 Lack of Adaptive Capacities
 
 Year
 
-Categorical risk levels for various indicators
+Categorical risk levels for selected indicators
 
-Target Variable:
+Target Variable
 
 WRI (World Risk Index)
 
-Project Workflow
-The project follows a standard machine learning pipeline:
+🔄 Project Workflow
 
-Data Loading: The dataset is loaded into a pandas DataFrame.
+Data Loading
 
-Exploratory Data Analysis & Preprocessing:
+Load dataset using pandas.
 
-The data is checked for missing values (none were found).
+Exploratory Data Analysis & Preprocessing
 
-Categorical features are one-hot encoded using OneHotEncoder.
+Checked for missing values (none found).
 
-Numerical features are scaled using StandardScaler.
+Applied OneHotEncoder for categorical features.
 
-Data Splitting: The preprocessed data is split into training (80%) and testing (20%) sets.
+Scaled numerical features with StandardScaler.
 
-Model Selection & Training: A RandomForestRegressor is chosen as the initial model and trained on the training data.
+Data Splitting
 
-Model Evaluation: The initial model's performance is evaluated on the test set using Mean Squared Error (MSE) and R-squared (R²) scores.
+Training (80%) / Testing (20%).
 
-Model Optimization: GridSearchCV is used to find the optimal hyperparameters for the RandomForestRegressor to improve its performance.
+Model Selection & Training
 
-Final Evaluation: The optimized model is evaluated on the test set, and its performance is analyzed through visualizations of actual vs. predicted values and residual plots. K-fold cross-validation is also performed to ensure the model's robustness.
+Initial model: RandomForestRegressor.
 
-Results
-The machine learning model demonstrated high accuracy in predicting the World Risk Index.
+Model Evaluation
 
-Initial Model Performance:
+Metrics: Mean Squared Error (MSE), R² Score.
 
-Mean Squared Error (MSE): ~0.0277
+Model Optimization
 
-R-squared (R²): ~0.9757
+Used GridSearchCV to fine-tune hyperparameters.
 
-Optimized Model Performance:
+Final Evaluation
 
-Best Hyperparameters: {'max_depth': 20, 'min_samples_split': 2, 'n_estimators': 100}
+Compared initial vs optimized performance.
 
-Mean Squared Error (MSE): ~0.0273
+Visualized Actual vs Predicted values & Residuals.
 
-R-squared (R²): ~0.9761
+Performed 5-fold Cross-Validation.
 
-Cross-Validation: The 5-fold cross-validation resulted in a mean MSE of approximately 0.0069, indicating a robust and reliable model.
+✅ Results
+Initial Model
 
-The high R-squared score suggests that the model can explain over 97% of the variance in the World Risk Index based on the given features.
+MSE: ~0.0277
 
-How to Use
-To run this project, you will need to have Python and the following libraries installed:
+R²: ~0.9757
 
-pandas
+Optimized Model
 
-scikit-learn
+Best Hyperparameters:
 
-matplotlib
+{'max_depth': 20, 'min_samples_split': 2, 'n_estimators': 100}
 
-numpy
 
-Clone the repository:
+MSE: ~0.0273
 
-git clone [https://github.com/AjayKumar0077/Disaster_prediction.git](https://github.com/AjayKumar0077/Disaster_prediction.git)
+R²: ~0.9761
 
-Navigate to the project directory:
+Cross-Validation
 
+Mean MSE (5-fold): ~0.0069
+
+Conclusion: Model explains 97%+ variance in WRI, making it highly robust and reliable.
+
+🚀 How to Run
+Requirements
+
+Install dependencies:
+
+pip install pandas scikit-learn matplotlib numpy
+
+Steps
+# Clone the repository
+git clone https://github.com/AjayKumar0077/Disaster_prediction.git
+
+# Navigate into the project
 cd Disaster_prediction
 
-Ensure the dataset World_risk_index__cleaned_data.csv is in the same directory.
+# Ensure dataset is present
+World_risk_index__cleaned_data.csv
 
-Open and run the AIML_Disaster_prediction_project.ipynb notebook in a Jupyter environment.
+# Open Jupyter Notebook
+jupyter notebook AIML_Disaster_prediction_project.ipynb
+
+📈 Visualizations
+
+Actual vs Predicted WRI values
+
+Residual plots for error analysis
+
+Feature importance plots
+
+🔮 Future Improvements
+
+Experiment with deep learning models for better accuracy.
+
+Integrate time-series forecasting for disaster risk trends.
+
+Deploy model using Flask/Streamlit for interactive risk prediction.
+
+🤝 Contributing
+
+Pull requests are welcome! Feel free to fork the repo, raise issues, and contribute improvements.
+
+📧 Contact
+
+Developed by Ajay Kumar
+🔗 GitHub: AjayKumar0077
